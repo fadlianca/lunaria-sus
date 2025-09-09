@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:lunaria/providers/chat_history_provider.dart';
 import '../../helpers/responsive_helper.dart';
-import '../../widgets/bottom_nav.dart';
 import '../../routes/routes.dart';
 import '../../widgets/home_pet/index.dart';
 
@@ -14,7 +13,6 @@ class VPHomeScreen extends StatefulWidget {
 }
 
 class _VPHomeScreenState extends State<VPHomeScreen> {
-  final int _currentIndex = 2;
   final TextEditingController _chatController = TextEditingController();
   final FocusNode _chatFocusNode = FocusNode();
 
@@ -131,23 +129,6 @@ class _VPHomeScreenState extends State<VPHomeScreen> {
                     top: ResponsiveHelper.getScreenHeight(context) * 0.23,
                     right: ResponsiveHelper.getMediumSpacing(context),
                     child: _buildMessageBubble(),
-                  ),
-
-                  // Bottom navigation
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: BottomNav(
-                      currentIndex: _currentIndex,
-                      onTap: (index) {
-                        NavigationService.navigateToBottomNavScreen(
-                          context,
-                          index,
-                          _currentIndex,
-                        );
-                      },
-                    ),
                   ),
                 ],
               ),
