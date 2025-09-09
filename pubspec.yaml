@@ -1,0 +1,33 @@
+name: lunaria
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^9.2.4
+  flutter_svg: ^2.0.9
+  google_generative_ai: ^0.4.7
+  http: ^1.5.0
+  intl: ^0.20.2
+  provider: ^6.1.5+1
+  shared_preferences: ^2.2.3
+  supabase_flutter: ^2.10.0
+  youtube_player_flutter: ^9.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # Assets configuration
+  assets:
+    - assets/images/
+    - assets/icons/
